@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Web App</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="left">
+                <div class="location-details">
+                    <div class="city">Delhi, IN</div>
+                    <div class="date">10 June, 2021 <br>Wednesday </div>
+                </div>
+                <div class="image"><img src="#" alt="image" id="image"></div>
+                <div class="weather-status">
+                    <div class="temp">
+                        <span class="curr-temp">34&deg;C</span>
+                        <span class="min-max">32&deg;C/35&deg;C</span>
+                    </div>
+                    <div class="description" id="weather">Clear</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="searchBox">
+                    <input class="searchInput" type="text" placeholder="Enter city name">
+                </div>
+                <div class="data">
+                    <table>
+                        <tr>
+                            <td>Wind</td>
+                            <td class="table-data wind">8km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Humidity</td>
+                            <td class="table-data humidity">30%</td>
+                        </tr>
+                        <tr>
+                            <td>Precipitation</td>
+                            <td class="table-data precipitation">10%</td>
+                        </tr>
+                    </table>
+    
+                    <h4 class="forecast-head">5-Day Forecast</h4>
+                    <div class="weather-forecast" id="weather-forecast">
+                        <div class="forecast-item">
+                            <div class="day">Tue</div>
+                            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                            <div class="ftemp">30&deg;C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="day">Wed</div>
+                            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                            <div class="ftemp">30&deg;C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="day">Thur</div>
+                            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                            <div class="ftemp">30&deg;C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="day">Fri</div>
+                            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                            <div class="ftemp">30&deg;C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="day">Sat</div>
+                            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                            <div class="ftemp">30&deg;C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
