@@ -1,5 +1,5 @@
 let weather = {
-    apiKey: /*api key here*/ ,
+    apiKey: config.apiKey ,
     fetchWeather: function (city) {
       fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${this.apiKey}`)
         .then((response) => {
@@ -16,7 +16,7 @@ let weather = {
         const { name } = data.city;
         const { country } = data.city;
         const { icon, description } = data.list[0].weather[0];
-        const { temp, humidity, temp_min, temp_max } = data.list[0].main;
+        const { temp, humidity, temp_min, temp_max, feels_like } = data.list[0].main;
         const { speed } = data.list[0].wind;
         document.querySelector(".city").innerText = name + ", " + country;
         document.querySelector("#image").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -25,6 +25,7 @@ let weather = {
         document.querySelector(".min-max").innerText = Math.round(temp_min) + "°C/" + Math.round(temp_max) + "°C";
         document.querySelector(".humidity").innerText = humidity + "%";
         document.querySelector(".wind").innerText = speed + " km/h";
+        document.querySelector(".feels_like").innerText = Math.round(feels_like) + "°C";
 
         let otherDayForcast = '';
         
