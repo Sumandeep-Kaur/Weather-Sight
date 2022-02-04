@@ -20,7 +20,7 @@ let weather = {
     const { speed } = data.list[0].wind;
     const { dt } = data.list[0];
     document.querySelector(".city").innerText = name + ", " + country;
-    document.querySelector("#image").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+    document.querySelector("#image").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
     document.querySelector(".description").innerText = description;
     document.querySelector(".curr-temp").innerText = Math.round(temp) + "°C";
     document.querySelector(".min-max").innerText = Math.round(temp_min) + "°C/" + Math.round(temp_max) + "°C";
@@ -65,7 +65,7 @@ let weather = {
       otherDayForcast += `
                       <div class="forecast-item">
                         <div class="day">${week[next_day]}</div>
-                        <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather icon" class="w-icon">
+                        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="weather icon" class="w-icon">
                         <div class="ftemp">${Math.round(temp)}&#176;C</div>
                       </div> 
                     `
