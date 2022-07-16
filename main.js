@@ -1,5 +1,6 @@
+import apiKey from './config.js';
 let weather = {
-  apiKey: config.apiKey,
+  apiKey: apiKey,
   fetchWeather: function (city) {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${this.apiKey}`)
       .then((response) => {
